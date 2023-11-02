@@ -3,6 +3,24 @@ entries:
   cryptgeon:
   - apiVersion: v2
     appVersion: 2.4.0
+    created: "2023-11-02T19:47:20.794078278Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 18.2.0
+    description: A Helm chart for Kubernetes
+    digest: 3e5a4a2b3e353ade78fbf12db078c8e233046213ab3faa82ef9c07e9dc466d17
+    maintainers:
+    - email: foo@bar.baz
+      name: swibrow
+    name: cryptgeon
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/cryptgeon-0.1.1/cryptgeon-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 2.4.0
     created: "2023-11-02T19:10:20.984779177Z"
     dependencies:
     - condition: redis.enabled
@@ -16,4 +34,4 @@ entries:
     urls:
     - https://github.com/swibrow/helm-charts/releases/download/cryptgeon-0.1.0/cryptgeon-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-02T19:10:20.984792877Z"
+generated: "2023-11-02T19:47:20.794093378Z"
