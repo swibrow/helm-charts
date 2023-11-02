@@ -1,7 +1,9 @@
 apiVersion: v2
 name: cryptgeon
 description: A Helm chart for Kubernetes
-
+maintainers:
+  - name: swibrow
+    email: foo@bar.baz
 type: application
 version: 0.1.1
 appVersion: "2.4.0"
