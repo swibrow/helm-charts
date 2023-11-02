@@ -14,6 +14,8 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+redisEndpoint: "redis://redis:6379"
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true

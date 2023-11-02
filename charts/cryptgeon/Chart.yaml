@@ -5,7 +5,7 @@ maintainers:
   - name: swibrow
     email: foo@bar.baz
 type: application
-version: 0.1.1
+version: 0.1.2
 appVersion: "2.4.0"
 
 dependencies:
