@@ -1,5 +1,19 @@
 apiVersion: v1
 entries:
+  babybuddy:
+  - apiVersion: v2
+    appVersion: v2.1.2-ls112
+    created: "2023-11-10T10:49:30.6903261Z"
+    description: A Babybuddy Helm chart for Kubernetes
+    digest: 1406cd1341d1e4d35973dcc2dfc846f7ab1e73e2e100f15ae468b52f65bb2cb6
+    maintainers:
+    - email: sam.wibrow@gmail.com
+      name: swibrow
+    name: babybuddy
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/babybuddy-0.1.1/babybuddy-0.1.1.tgz
+    version: 0.1.1
   cryptgeon:
   - apiVersion: v2
     appVersion: 2.4.0
@@ -557,4 +571,4 @@ entries:
     urls:
     - https://github.com/swibrow/helm-charts/releases/download/renovate-37.43.0/renovate-37.43.0.tgz
     version: 37.43.0
-generated: "2023-11-10T09:05:07.805347117Z"
+generated: "2023-11-10T10:49:30.690379069Z"
