@@ -84,15 +84,26 @@ volumes: []
 #   secret:
 #     secretName: mysecret
 #     optional: false
+#  - name: config
+#    persistentVolumeClaim:
+#      claimName: {{ include "chart.fullname" . }}-pvc
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts: []
-# - name: foo
-#   mountPath: "/etc/foo"
-#   readOnly: true
+  # - name: foo
+  #   mountPath: "/etc/foo"
+  #   readOnly: true
+  # - name: config
+  #   mountPath: "/config"
 
 nodeSelector: {}
 
 tolerations: []
 
 affinity: {}
+
+persistence:
+  enabled: false
+  storageClass: ""
+  accessMode: ReadWriteOnce
+  size: 1Gi

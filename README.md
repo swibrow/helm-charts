@@ -1,13 +1,6 @@
-# Renovate
+# Helm Charts
 
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/renovatebot/helm-charts?style=for-the-badge)](https://github.com/renovatebot/helm-charts/releases/latest)
-[![License](https://img.shields.io/github/license/renovatebot/helm-charts?style=for-the-badge)](https://opensource.org/licenses/AGPL-3.0)
-
-Automated dependency updates.
-Multi-platform and multi-language.
-
-This repository hosts Renovate's [Helm](https://helm.sh) charts.
-Chart documentation is automatically generated using [helm-docs](https://github.com/norwoodj/helm-docs).
+[Repository cloned from Renovate Helm Charts](https://github.com/renovatebot/helm-charts)
 
 ## Kubernetes version support
 
@@ -21,7 +14,7 @@ The general concept is that we track the versions of Kubernetes that are support
 ## Add Helm repository
 
 ```bash
-helm repo add renovate https://docs.renovatebot.com/helm-charts
+helm repo add swibrow https://swibrow.github.io/helm-charts
 helm repo update
 ```
 
@@ -47,6 +40,6 @@ When using this repo locally or contributing to this repo, you will need to buil
 You can run the following commands to do so:
 
 ```bash
-cd charts/renovate
+cd charts/<chart>
 helm dependency build
 ```
