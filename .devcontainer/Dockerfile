@@ -3,7 +3,7 @@ FROM ghcr.io/containerbase/base:9.28.0@sha256:6273193cb55945e8d7a915482949758455
 COPY tools/*.sh /usr/local/containerbase/tools/
 
 # renovate: datasource=github-releases depName=docker packageName=moby/moby
-ARG DOCKER_VERSION=v24.0.8
+ARG DOCKER_VERSION=v24.0.9
 RUN install-tool docker
 
 # renovate: datasource=github-releases depName=kubectl packageName=kubernetes/kubernetes
