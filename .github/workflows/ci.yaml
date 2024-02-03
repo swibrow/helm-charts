@@ -86,7 +86,7 @@ jobs:
         k8s:
           # from https://hub.docker.com/r/kindest/node/tags
           # - v1.24.17 # renovate: kindest
-          # - v1.25.11 # renovate: kindest
+          # - v1.25.16 # renovate: kindest
           # - v1.26.6 # renovate: kindest
           # - v1.27.3 # renovate: kindest
           - v1.28.0 # renovate: kindest
