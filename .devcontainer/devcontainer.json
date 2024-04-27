@@ -1,5 +1,5 @@
 {
-  "name": "renovatebot/helm-charts",
+  "name": "swibrow/helm-charts",
   "build": {
     "dockerfile": "Dockerfile"
   },
