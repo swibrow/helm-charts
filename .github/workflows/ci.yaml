@@ -29,7 +29,7 @@ jobs:
 
       - uses: actions/setup-python@b64ffcaf5b410884ad320a9cfac8866006a109aa # v4.8.0
         with:
-          python-version: 3.7
+          python-version-file: .python-version
 
       - name: Install chart-testing
         uses: helm/chart-testing-action@e6669bcd63d7cb57cb4380c33043eebe5d111992 # v2.6.1
@@ -57,11 +57,10 @@ jobs:
       matrix:
         k8s:
           # from https://github.com/yannh/kubernetes-json-schema
-          # - v1.24.17
-          # - v1.25.14
-          # - v1.26.9
-          # - v1.27.6
-          - v1.28.2
+          - v1.26.12
+          - v1.27.9
+          - v1.28.5
+          - v1.29.0
     steps:
       - name: Checkout
         uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
@@ -85,11 +84,10 @@ jobs:
       matrix:
         k8s:
           # from https://hub.docker.com/r/kindest/node/tags
-          # - v1.24.17 # renovate: kindest
-          # - v1.25.16 # renovate: kindest
-          # - v1.26.14 # renovate: kindest
-          # - v1.27.11 # renovate: kindest
+          - v1.26.14 # renovate: kindest
+          - v1.27.11 # renovate: kindest
           - v1.28.7 # renovate: kindest
+          - v1.29.2 # renovate: kindest
     steps:
       - name: Checkout
         uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
