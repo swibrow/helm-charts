@@ -6,7 +6,7 @@ maintainers:
     email: sam.wibrow@gmail.com
 type: application
 version: 0.2.3
-appVersion: "2.4.0"
+appVersion: "2.6.0"
 
 dependencies:
   - name: redis

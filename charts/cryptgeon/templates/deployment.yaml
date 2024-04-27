@@ -36,9 +36,11 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if .Values.redis.enabled }}
           env:
             - name: REDIS
-              value: {{ .Values.redisEndpoint }}
+              value: {{ printf "redis://%s-redis-master:6379" .Release.Name}}
+          {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

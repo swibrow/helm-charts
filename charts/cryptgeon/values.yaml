@@ -1,6 +1,13 @@
 # Default values for cryptgeon.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+redis:
+  enabled: true
+  architecture: standalone
+  auth:
+    enabled: false
+
+redisEndpoint: "redis://cryptgeon-redis-master:6379"
 
 replicaCount: 1
 
@@ -13,8 +20,6 @@ image:
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
-
-redisEndpoint: "redis://redis:6379"
 
 serviceAccount:
   # Specifies whether a service account should be created
