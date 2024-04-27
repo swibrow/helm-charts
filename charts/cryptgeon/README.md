@@ -14,7 +14,7 @@ A Helm chart for Kubernetes
 
 | Repository | Name | Version |
 |------------|------|---------|
-| oci://registry-1.docker.io/bitnamicharts | redis | 18.2.0 |
+| oci://registry-1.docker.io/bitnamicharts | redis | 19.1.3 |
 
 ## Values
 

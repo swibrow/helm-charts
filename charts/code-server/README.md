@@ -25,7 +25,7 @@ A Helm chart for coder/code-server
 | hostnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"Always"` |  |
 | image.repository | string | `"codercom/code-server"` |  |
-| image.tag | string | `"4.5.1"` |  |
+| image.tag | string | `"4.23.1"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.ingressClassName | string | `""` |  |
