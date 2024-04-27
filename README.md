@@ -4,12 +4,8 @@
 
 ## Kubernetes version support
 
-We test the four latest versions of Kubernetes.
+Test the latest versions of Kubernetes.
 The general concept is that we track the versions of Kubernetes that are supported by the major cloud providers.
-
-- [Amazon Elastic Kubernetes Service (Amazon EKS)](https://endoflife.date/amazon-eks)
-- [Azure Kubernetes Service (AKS)](https://endoflife.date/azure-kubernetes-service)
-- [Google Kubernetes Engine (GKE)](https://endoflife.date/google-kubernetes-engine)
 
 ## Add Helm repository
 
@@ -20,19 +16,9 @@ helm repo update
 
 ## Install chart
 
-Using config from a file:
-
 ```bash
-helm install --generate-name --set-file renovate.config=config.json renovate/renovate
+helm install --generate-name repo/chart
 ```
-
-Using config from a string:
-
-```bash
-helm install --generate-name --set renovate.config='\{\"token\":\"...\"\}' renovate/renovate
-```
-
-**Note**: `renovate.config` must be a valid Renovate [self-hosted configuration](https://docs.renovatebot.com/self-hosted-configuration/).
 
 ## Contributing
 
