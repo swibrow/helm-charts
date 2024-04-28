@@ -46,4 +46,16 @@ entries:
     urls:
     - https://github.com/swibrow/helm-charts/releases/download/cryptgeon-0.1.0/cryptgeon-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-28T11:35:56.37877996Z"
+  custom-resource:
+  - apiVersion: v2
+    created: "2024-04-28T16:30:52.234986518Z"
+    description: A Helm chart for Kubernetes
+    digest: 0cb25c70fb3a8046a8e1b609269e94758e617835441d776ea75ba2e96098b1a1
+    maintainers:
+    - name: swibrow
+    name: custom-resource
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/custom-resource-0.1.1/custom-resource-0.1.1.tgz
+    version: 0.1.1
+generated: "2024-04-28T16:30:52.234996346Z"
