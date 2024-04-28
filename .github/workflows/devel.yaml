@@ -1,22 +1,32 @@
-name: devel
-
+name: devcontainer
 on:
   push:
     branches:
-      - main
-      - 'renovate/**'
+      - '**'
+      - '!main'
   pull_request:
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
-  cancel-in-progress: true
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
 
 jobs:
-  test-devcontainer:
+  devcontainer-test:
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || (github.repository_owner != github.event.pull_request.head.repo.owner.login && github.event.pull_request.draft != true)
     steps:
       - name: Checkout
         uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
+        with:
+          submodules: true
 
-      - name: build devcontainer
-        run: docker build .devcontainer
+      - name: Build and run dev container task
+        uses: devcontainers/ci@a56d055efecd725e8cfe370543b6071b79989cc8 # v0.3.1900000349
+        with:
+          runCmd: ct lint --config .github/ct.yaml --charts charts/custom-resource
+          env: GITHUB_TOKEN
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

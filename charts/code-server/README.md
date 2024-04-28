@@ -1,6 +1,6 @@
 # code-server
 
-![Version: 3.0.1](https://img.shields.io/badge/Version-3.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.5.1](https://img.shields.io/badge/AppVersion-4.5.1-informational?style=flat-square)
+![Version: 3.0.2](https://img.shields.io/badge/Version-3.0.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.5.1](https://img.shields.io/badge/AppVersion-4.5.1-informational?style=flat-square)
 
 A Helm chart for coder/code-server
 
@@ -25,7 +25,7 @@ A Helm chart for coder/code-server
 | hostnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"Always"` |  |
 | image.repository | string | `"codercom/code-server"` |  |
-| image.tag | string | `"4.5.1"` |  |
+| image.tag | string | `"4.23.1"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.ingressClassName | string | `""` |  |
