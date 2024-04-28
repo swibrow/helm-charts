@@ -1,8 +1,27 @@
 # custom-resource
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 A Helm chart for Kubernetes
+
+## Installation
+
+### Add Helm repository
+
+```shell
+helm repo add swibrow https://swibrow.github.io/helm-charts
+helm repo update
+```
+
+## Install custom resource chart
+
+Using config from a file:
+
+```bash
+helm install --generate-name --values custom-resource.yaml swibrow/custom-resource
+```
+
+**NOTE**: `custom-resource.yaml` must be a single yaml doc containing a valid custom resource.
 
 ## Maintainers
 
