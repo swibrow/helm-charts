@@ -4,6 +4,25 @@
 
 A Helm chart for Kubernetes
 
+## Installation
+
+### Add Helm repository
+
+```shell
+helm repo add swibrow https://swibrow.github.io/helm-charts
+helm repo update
+```
+
+## Install custom resource chart
+
+Using config from a file:
+
+```bash
+helm install --generate-name --values custom-resource.yaml swibrow/custom-resource
+```
+
+**NOTE**: `custom-resource.yaml` must be a single yaml doc containing a valid custom resource.
+
 ## Maintainers
 
 | Name | Email | Url |
