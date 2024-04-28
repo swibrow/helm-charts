@@ -1,0 +1,49 @@
+apiVersion: v1
+entries:
+  babybuddy:
+  - apiVersion: v2
+    appVersion: v2.1.2-ls112
+    created: "2024-04-28T11:35:56.026701121Z"
+    description: A Babybuddy Helm chart for Kubernetes
+    digest: ac3e916391eb3cc7ed873bff73ac3e80e24292d66c3ccaad872e76f3b85dfeed
+    maintainers:
+    - email: sam.wibrow@gmail.com
+      name: swibrow
+    name: babybuddy
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/babybuddy-0.1.0/babybuddy-0.1.0.tgz
+    version: 0.1.0
+  code-server:
+  - apiVersion: v2
+    appVersion: 4.5.1
+    created: "2024-04-28T11:35:56.201008381Z"
+    description: A Helm chart for coder/code-server
+    digest: a3b4282b522c1f0c4c37b1a4f4fffa12eaf6139ca1a5ed94bd1bf8a08e03cad4
+    maintainers:
+    - name: swibrow
+    name: code-server
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/code-server-0.1.0/code-server-0.1.0.tgz
+    version: 0.1.0
+  cryptgeon:
+  - apiVersion: v2
+    appVersion: 2.6.0
+    created: "2024-04-28T11:35:56.378771264Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 19.1.3
+    description: A Helm chart for Kubernetes
+    digest: f4bb50fdb876d84dc6d948cf6c79440d36e81bf94d6b8fafb52b95ad242d6d80
+    maintainers:
+    - email: sam.wibrow@gmail.com
+      name: swibrow
+    name: cryptgeon
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/cryptgeon-0.1.0/cryptgeon-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-04-28T11:35:56.37877996Z"
