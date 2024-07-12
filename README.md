@@ -1,12 +1,5 @@
 # Helm Charts
 
-[Repository cloned from Renovate Helm Charts](https://github.com/renovatebot/helm-charts)
-
-## Kubernetes version support
-
-Test the latest versions of Kubernetes.
-The general concept is that we track the versions of Kubernetes that are supported by the major cloud providers.
-
 ## Add Helm repository
 
 ```bash
@@ -29,3 +22,11 @@ You can run the following commands to do so:
 cd charts/<chart>
 helm dependency build
 ```
+
+## Charts
+
+- [babybuddy](charts/babybuddy/README.md)
+- [code-server](charts/code-server/README.md)
+- [cryptgeon](charts/crpptgeon/README.md)
+- [custom-resources](charts/custom-resources/README.md)
+
