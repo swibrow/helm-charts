@@ -6,7 +6,7 @@ export PATH="./.bin:$PATH"
 set -euxo pipefail
 
 # renovate: datasource=github-releases depName=helm-docs packageName=norwoodj/helm-docs
-HELM_DOCS_VERSION=1.13.1
+HELM_DOCS_VERSION=1.14.2
 
 os=$(uname -s)
 arch=$(uname -m)
