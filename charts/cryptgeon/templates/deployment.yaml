@@ -39,7 +39,7 @@ spec:
           {{- if .Values.redis.enabled }}
           env:
             - name: REDIS
-              value: {{ printf "redis://%s-redis-master:6379" .Release.Name}}
+              value: {{ .Values.redisEndpoint }}
           {{- end }}
           ports:
             - name: http
