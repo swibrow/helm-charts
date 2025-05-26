@@ -29,6 +29,24 @@ entries:
     version: 0.1.0
   cryptgeon:
   - apiVersion: v2
+    appVersion: 2.9.1
+    created: "2025-05-26T05:40:09.326187648Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 3.0.9
+    description: A Helm chart for Kubernetes
+    digest: fb5011af54ce3890362764d38e355fd2c5d8b07d3b8346b0fe651719ab5804d8
+    maintainers:
+    - email: sam.wibrow@gmail.com
+      name: swibrow
+    name: cryptgeon
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/cryptgeon-0.2.0/cryptgeon-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 2.6.0
     created: "2024-04-28T11:35:56.378771264Z"
     dependencies:
@@ -58,4 +76,4 @@ entries:
     urls:
     - https://github.com/swibrow/helm-charts/releases/download/custom-resource-0.1.1/custom-resource-0.1.1.tgz
     version: 0.1.1
-generated: "2024-04-28T16:30:52.234996346Z"
+generated: "2025-05-26T05:40:09.326200532Z"
