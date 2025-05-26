@@ -1,6 +1,6 @@
 dependencies:
-- name: redis
+- name: valkey
   repository: oci://registry-1.docker.io/bitnamicharts
-  version: 19.6.4
-digest: sha256:b30cb13af1d8abb6f7b9d9fe908c9006e2c481ca2358258a8ab04ca6e99a07f6
-generated: "2024-07-25T15:26:07.075450753Z"
+  version: 3.0.9
+digest: sha256:44f41bda6ec012c8e511076668d00e09a3e8413c1ce372c9029566ab17425d23
+generated: "2025-05-26T07:30:00.786169+02:00"

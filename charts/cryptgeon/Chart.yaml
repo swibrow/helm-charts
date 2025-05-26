@@ -5,11 +5,11 @@ maintainers:
   - name: swibrow
     email: sam.wibrow@gmail.com
 type: application
-version: 0.1.0
-appVersion: "2.6.0"
+version: 0.2.0
+appVersion: "2.9.1"
 
 dependencies:
-  - name: redis
-    version: 19.6.4
+  - name: valkey
+    version: 3.0.9
     repository: oci://registry-1.docker.io/bitnamicharts
-    condition: redis.enabled
+    condition: valkey.enabled

@@ -1,14 +1,8 @@
 # Default values for cryptgeon.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-redis:
-  enabled: true
-  architecture: standalone
-  auth:
-    enabled: false
-
-redisEndpoint: "redis://cryptgeon-redis-master:6379"
-
+valkey:
+  enabled: false
 replicaCount: 1
 
 image:
@@ -21,6 +15,16 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+env:
+  - name: CRYPTGEON_VALKEY_HOST
+    value: "valkey.default.svc.cluster.local"
+  # - name: EXAMPLE_ENV_VAR
+  #   value: "example-value"
+  # - name: ANOTHER_ENV_VAR
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: example-secret
+  #       key: example-key
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
@@ -35,10 +39,12 @@ serviceAccount:
 podAnnotations: {}
 podLabels: {}
 
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -53,7 +59,8 @@ service:
 ingress:
   enabled: false
   className: ""
-  annotations: {}
+  annotations:
+    {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
@@ -66,7 +73,8 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources: {}
+resources:
+  {}
   # limits:
   #   cpu: 100m
   #   memory: 128Mi
