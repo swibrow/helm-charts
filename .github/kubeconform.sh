@@ -38,6 +38,9 @@ chmod +x .bin/semver2
 # Initialize apis array
 apis=(--api-versions batch/v1/CronJob)
 
+# Add helm repos from ct.yaml
+helm repo add valkey https://valkey.io/valkey-helm/ || true
+
 # validate charts
 for CHART_DIR in ${CHART_DIRS}; do
   (cd "charts/${CHART_DIR}"; helm dependency build)
