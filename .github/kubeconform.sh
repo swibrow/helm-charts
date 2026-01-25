@@ -2,25 +2,41 @@
 mkdir -p ./.bin
 export PATH="./.bin:$PATH"
 set -euxo pipefail
+
 # renovate: datasource=github-releases depName=kubeconform packageName=yannh/kubeconform
 KUBECONFORM_VERSION=v0.7.0
 # renovate: datasource=github-releases depName=semver2 packageName=Ariel-Rodriguez/sh-semversion-2
 SEMVER_VERSION=v1.0.5
+
+# Detect OS and architecture
+OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+ARCH=$(uname -m)
+
+# Map architecture names for kubeconform
+case "${ARCH}" in
+  x86_64) ARCH="amd64" ;;
+  aarch64|arm64) ARCH="arm64" ;;
+  *) echo "Unsupported architecture: ${ARCH}"; exit 1 ;;
+esac
+
+# Default Kubernetes version if not set
+KUBERNETES_VERSION="${KUBERNETES_VERSION:-v1.31.4}"
+
 CHART_DIRS="$(git diff --find-renames --name-only "$(git rev-parse --abbrev-ref HEAD)" remotes/origin/main -- charts | cut -d '/' -f 2 | uniq)"
 SCHEMA_LOCATION="https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/"
 
 # install kubeconform
-curl --silent --show-error --fail --location --output /tmp/kubeconform.tar.gz https://github.com/yannh/kubeconform/releases/download/"${KUBECONFORM_VERSION}"/kubeconform-linux-amd64.tar.gz
+curl --silent --show-error --fail --location --output /tmp/kubeconform.tar.gz \
+  "https://github.com/yannh/kubeconform/releases/download/${KUBECONFORM_VERSION}/kubeconform-${OS}-${ARCH}.tar.gz"
 tar -C .bin/ -xf /tmp/kubeconform.tar.gz kubeconform
 chmod +x .bin/kubeconform
 
 # install semver compare
-curl -sSfLo .bin/semver2 https://raw.githubusercontent.com/Ariel-Rodriguez/sh-semversion-2/${SEMVER_VERSION}/semver2.sh
+curl -sSfLo .bin/semver2 "https://raw.githubusercontent.com/Ariel-Rodriguez/sh-semversion-2/${SEMVER_VERSION}/semver2.sh"
 chmod +x .bin/semver2
 
 # Initialize apis array
 apis=(--api-versions batch/v1/CronJob)
-
 
 # validate charts
 for CHART_DIR in ${CHART_DIRS}; do
