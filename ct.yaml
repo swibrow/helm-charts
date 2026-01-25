@@ -1,0 +1,16 @@
+chart-dirs:
+  - charts
+
+helm-extra-args: --timeout 2m
+
+check-version-increment: true
+validate-yaml: true
+validate-chart-schema: true
+validate-maintainers: false
+
+lint-conf: lintconf.yaml
+
+target-branch: main
+github-groups: true
+
+debug: true

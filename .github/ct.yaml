@@ -1,4 +1,0 @@
-helm-extra-args:
-check-version-increment: true
-debug: true
-target-branch: main
