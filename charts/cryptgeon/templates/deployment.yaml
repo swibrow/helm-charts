@@ -36,10 +36,14 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          {{- if .Values.env }}
           env:
-            {{- toYaml .Values.env | nindent 12 }}
-          {{- end }}
+            {{- if .Values.valkey.enabled }}
+            - name: CRYPTGEON_VALKEY_HOST
+              value: "{{ include "cryptgeon.fullname" . }}-valkey"
+            {{- end }}
+            {{- with .Values.env }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

@@ -15,9 +15,7 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-env:
-  - name: CRYPTGEON_VALKEY_HOST
-    value: "valkey.default.svc.cluster.local"
+env: []
   # - name: EXAMPLE_ENV_VAR
   #   value: "example-value"
   # - name: ANOTHER_ENV_VAR
@@ -25,6 +23,7 @@ env:
   #     secretKeyRef:
   #       name: example-secret
   #       key: example-key
+  # Note: CRYPTGEON_VALKEY_HOST is automatically set when valkey.enabled=true
 serviceAccount:
   # Specifies whether a service account should be created
   create: true

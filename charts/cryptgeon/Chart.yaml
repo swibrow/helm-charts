@@ -5,11 +5,11 @@ maintainers:
   - name: swibrow
     email: sam.wibrow@gmail.com
 type: application
-version: 0.2.1
+version: 0.3.0
 appVersion: "2.9.1"
 
 dependencies:
   - name: valkey
-    version: 3.0.9
-    repository: oci://registry-1.docker.io/bitnamicharts
+    version: 0.9.3
+    repository: https://valkey.io/valkey-helm/
     condition: valkey.enabled
