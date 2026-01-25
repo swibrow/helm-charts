@@ -3,6 +3,19 @@ entries:
   babybuddy:
   - apiVersion: v2
     appVersion: v2.1.2-ls112
+    created: "2026-01-25T22:15:22.151432076Z"
+    description: A Babybuddy Helm chart for Kubernetes
+    digest: 0084aceb0cee5c7e03bd584ab6a7a115bf08ee327e737bede0ec043908e62a00
+    maintainers:
+    - email: sam.wibrow@gmail.com
+      name: swibrow
+    name: babybuddy
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/babybuddy-0.1.1/babybuddy-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: v2.1.2-ls112
     created: "2024-04-28T11:35:56.026701121Z"
     description: A Babybuddy Helm chart for Kubernetes
     digest: ac3e916391eb3cc7ed873bff73ac3e80e24292d66c3ccaad872e76f3b85dfeed
@@ -17,6 +30,18 @@ entries:
   code-server:
   - apiVersion: v2
     appVersion: 4.5.1
+    created: "2026-01-25T22:15:22.342185439Z"
+    description: A Helm chart for coder/code-server
+    digest: 63acf4f681974198b1aa7642271d6305cd75cf486becc25b9729233ab6c8c773
+    maintainers:
+    - name: swibrow
+    name: code-server
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/code-server-0.1.1/code-server-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 4.5.1
     created: "2024-04-28T11:35:56.201008381Z"
     description: A Helm chart for coder/code-server
     digest: a3b4282b522c1f0c4c37b1a4f4fffa12eaf6139ca1a5ed94bd1bf8a08e03cad4
@@ -28,6 +53,24 @@ entries:
     - https://github.com/swibrow/helm-charts/releases/download/code-server-0.1.0/code-server-0.1.0.tgz
     version: 0.1.0
   cryptgeon:
+  - apiVersion: v2
+    appVersion: 2.9.1
+    created: "2026-01-25T22:15:22.484804814Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 3.0.9
+    description: A Helm chart for Kubernetes
+    digest: 2b3002da943a323ca18a0c0fc79bdec0742e7af1acd6b0c9c4967e1924415453
+    maintainers:
+    - email: sam.wibrow@gmail.com
+      name: swibrow
+    name: cryptgeon
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/cryptgeon-0.2.1/cryptgeon-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     appVersion: 2.9.1
     created: "2025-05-26T05:40:09.326187648Z"
@@ -66,6 +109,17 @@ entries:
     version: 0.1.0
   custom-resource:
   - apiVersion: v2
+    created: "2026-01-25T22:15:22.723913568Z"
+    description: A Helm chart for Kubernetes
+    digest: 2e182af921be2fb9b4835a0b1ded71af4d3d837d1c9cb485d5b04809142c9424
+    maintainers:
+    - name: swibrow
+    name: custom-resource
+    type: application
+    urls:
+    - https://github.com/swibrow/helm-charts/releases/download/custom-resource-0.1.2/custom-resource-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2024-04-28T16:30:52.234986518Z"
     description: A Helm chart for Kubernetes
     digest: 0cb25c70fb3a8046a8e1b609269e94758e617835441d776ea75ba2e96098b1a1
@@ -76,4 +130,4 @@ entries:
     urls:
     - https://github.com/swibrow/helm-charts/releases/download/custom-resource-0.1.1/custom-resource-0.1.1.tgz
     version: 0.1.1
-generated: "2025-05-26T05:40:09.326200532Z"
+generated: "2026-01-25T22:15:22.723936982Z"
